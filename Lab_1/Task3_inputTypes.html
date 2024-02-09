@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 3 | Input Types</title>
+</head>
+
+<body>
+    <form action="#" enctype="application/x-www-form-urlencoded">
+        HTML 5 color Element <br>
+        Select your favourite color: <input type="color"> <br>
+        <input type="submit" value="Submit"> <br> <br>
+        HTML 5 input restriction as number <br>
+        Quantity (between 1 and 5): <input type="number" min="1" max="5"> <input type="button" value="Send"> <br><br>
+        HTML 5 data Encryption <br>
+        Username: <input type="text" name="sername"> Encryption:
+        <select>
+            <option value="2048">2048 (High Grade)</option>
+        </select> <input type="submit" value="Submit"> <br><br>
+        HTML 5 date picker <br>
+        Birthday: <input type="date"> <input type="button" value="Send"> <br><br>
+        HTML 5 Audio Element <br>
+        <audio controls muted></audio> <br><br>
+        HTML 5 CANVAS (graphics and text) <br>
+        <canvas id="myCanvas" width="200" height="100" style="border: 2px solid black;"></canvas>
+    </form>
+
+    <script>
+        var c = document.getElementById("myCanvas");
+        var ctx = c.getContext("2d");
+        ctx.font = "30px Arial";
+        ctx.fillText("Hello World", 10, 50);
+    </script>
+</body>
+
+</html>
