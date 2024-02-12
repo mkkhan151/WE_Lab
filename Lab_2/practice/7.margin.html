@@ -1,0 +1,36 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Margin</title>
+    <!-- Referencing external style sheet -->
+    <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+
+<body>
+    <p>Margin is the space around every HTML element. It could be space aroung an element top, bottom, right and left.
+    Around an element space means element-&gtpadding-&gtborder-&gtmargin. So space is actually in the former sequence.</p>
+    <p>For example, a picture frame. The margin is the empty space between the edge of the picture and the frame itself.</p>
+    
+    <p class="marginStyle">Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+        Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a 
+        galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, 
+        but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s 
+        with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing
+         software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    <!-- only for auto -->
+    <p class="marginStyleAuto">I will take the width for the text and rest will be horizontally in the center
+         with respect to the element. Here the element is the paragraph p tag. <br><br>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    </p>
+    
+    <!-- only for inherit, here bold tag is child of paragraph tag -->
+    <!-- paragraph tag margin properties will be applied as parent to bold -->
+    <p class="marginInherit">
+        <b class="inheritCSS">
+        Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</b>
+    </p>
+    
+    
+</body>
+</html>

@@ -1,30 +1,303 @@
-/* 1. Types Of CSS */
+/* 1.typeofCSS.html External CSS */
 i{
     font-size: 60px;
 }
 
-/* 2. Class Id */
-
+/* 2.classid.html */
 #first_para{
-    color: blue;
-    font-weight: bold;
-    font-size: 300%;
+	color: blue;
+	font-size: 300%;
+	font-weight: bold;
 }
-
 .sec_para{
-    color: green;
-    font-size: 24px;
+	color: green;
+	font-size: 24px;
 }
-
 .double_class{
     font-weight: bold;
 }
-
-h3, h4, h5{
-    font-size: large;
+h3,h4,h5{
+    font-size: larger;
     font-weight: bold;
     text-align: center;
     color: red;
 }
+/* 3.divspan.html */
+.blueblock{
+    background-color: blue;
+}
+.diff{
+    font-size: 50px;
+    color: white;
+}
+/* 4.boxmodel.html */
+.first_box_model{
+	width: 300px;
+	height: auto;
+	text-align: justify;
+	background-color: skyblue;
+	padding: 15px 15px 15px 15px;  /* top right bottom left */
+	border: 5px double;
+    margin: 15px;
+}
+.second_para_model{
+    width: 300px;
+	height: auto;
+	text-align: justify;
+	background-color: skyblue;
+	padding: 15px 15px 15px 15px;  /* top right bottom left */
+	border: 5px double;
+    margin: 15px;    
+}
+/* 5.background.html */
+.backgroundColor{
+    background-color: aqua;
+}
+.backgroundImage{
+    background-image: url("images/image.png");
+}
+.backgroundRepeat{
+    background-image: url("images/list.png");
+    background-repeat: no-repeat;
+    /* try with repeat x and repeat y for difference
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    */
+    /* position against the element 
+    background-position:center;*/
+    
+    /* for origin content */
+    border: groove;
+    background-origin: content-box;
+    padding-left: 20px;
+    
+}
+.backgroundAttachment{
+    background-image: url("images/image.png");
+    background-attachment: scroll;
+    background-repeat: repeat-y;
+    border: groove;
+    background-origin: content-box;
+    padding-left: 20px;    
+}
+/* 6.border.html */
+.borderStyle{
+    margin-top: 50px;
+    padding: 50px;
+    border-style: double;
+    border-radius: 15px;
+    border-width: 10px;
+    border-top-color: red;
+}
+/* 7.margin.html */
+.marginStyle{
+    border-style: dotted;
+    padding: 15px;
+    margin-top: 100px;
+    margin-left: 75px;
+    margin-right: 75px;
+}
+.marginStyleAuto{
+    border-style: double;
+    padding: 15px;
+    width: 500px;
+    margin: auto;
+}
+.marginInherit{
+    border-style: dotted;
+    padding: 15px;
+    margin-left: 50px;
+}
+.inheritCSS{
+    margin-right: 50px;
+    margin: inherit;
+}
+/* 8.outline.html */
+.outlineCSS{
+    border-style: dashed;
+    border-color: blue;
+    border-width: 5px;
+    margin-top: 50px;
+    width: 500px;
+    margin-left: 200px;
+    padding: 30px;
+    outline-style: dotted;
+    outline-width: 10px;
+    outline-color: red;
+    outline-offset: 30px; /* remove this in order to see diff clear */
+}
+/* 9.text.html */
 
-/*  */
+.textColor{
+    color: blue;
+}
+.textAlignment{
+    text-align: center;
+}
+.textSpacing{
+    letter-spacing: 5px; 
+    word-spacing: 5px;
+    text-indent: 200px;
+    
+}
+.textShadow{
+    text-shadow: 4px 4px 6px red; /* horizontal, vertical, blur, color */
+    
+}
+.textDecoration{
+    text-decoration: line-through;
+}
+.textTransformation{
+    text-transform: uppercase;
+}
+/* 10.links.html */
+.styleLink{
+    font-size: 50px;
+}
+a:link{
+    color: red;
+}
+a:visited{
+    color: yellow;
+}
+a:hover{
+    color: green;
+}
+a:active{
+    color: red;
+}
+.styleTesting{
+    font-size: 50px;
+    text-decoration: none;
+    display: block;
+    text-align: center;
+}
+a:visited, a:hover, a:active{
+    color: blue;
+}
+
+.buttonStyleblock{
+    text-decoration: none;
+    display: block;
+    text-align: center;
+    background-color: aqua;
+    padding: 10px;
+    font-size: 30px;    
+}
+.buttonStyleinline{
+    text-decoration: none;
+    display: inline;
+    background-color: aqua;
+    padding: 10px;
+    font-size: 30px;
+}
+/* 11.lists.html */
+.number_one_list{
+    list-style-type: decimal;
+}
+.number_two_list{
+    list-style-image: url("images/list.png");    
+}
+.number_three_list{
+    list-style-image: url("images/list.png");
+    list-style-position: inside;
+}
+.number_four_list{
+    list-style-image: url("images/list.png");
+    list-style-position: outside;
+}
+
+ul li{
+    list-style-type: none;    /* to remove bullets */
+}
+.number_five_list li{
+	display: inline;    /* display like menu */	
+}
+/* 13.imageopacity.html */
+.image_opacity{
+	width: 100px;
+	height: 150px;
+	opacity: 0.5;		/* opacity value should be in between 0 and 1 */
+}
+
+.image_opacity_two{
+	width: 100px;
+	height: 150px;	
+}
+/* 14.gradients.html */
+.first_gradient{
+	height: 100px;
+	width: auto;
+	/* multiple colors from top to bottom by default */
+	background: linear-gradient(blue,white); 
+	background: -webkit-linear-gradient(blue,white); /* Safari */
+	background: -o-linear-gradient(blue,white);      /* Opera */
+	background: -moz-linear-gradient(blue,white);    /* Mozilla */
+}
+
+.second_gradient{
+	margin-top: 10px;
+	width: auto;
+	height: 100px;
+	background: linear-gradient(to left,blue,white,orange); /* to left is direction*/
+}
+
+.third_gradient{
+	margin-top: 10px;
+	width: auto;
+	height: 100px;
+	background: linear-gradient(to bottom left,blue,white,orange);
+}
+
+.fourth_gradient{
+	margin-top: 10px;
+	width: auto;
+	height: 100px;
+	background: linear-gradient(90deg,blue,white,orange);
+}
+
+.fifth_gradient{
+	margin-top: 10px;
+	width: auto;
+	height: 100px;
+	background: linear-gradient(to left, rgba(0,0,255,0.5),rgba(0,0,255,1));
+}
+
+.sixth_gradient{
+	margin-top: 10px;
+	width: auto;
+	height: 100px;
+	background: radial-gradient(blue 15%,white 15%,orange 60%);
+}
+
+.seventh_gradient{
+	margin-top: 10px;
+	width: auto;
+	height: 100px;
+	background: radial-gradient(circle,blue 5%,white 15%,orange 80%);
+}
+/* 15.2Dtransform.html */
+.transform_class{
+	background-color: cyan;
+	width: 100px;
+	height: 100px;
+	color: white;
+    /* towards right and bottom, if put minus sign then towards left and top */
+	/*transform: translate(20px,30px); */
+    /*transform: translate(-20px,-30px); */
+    
+	/* For transform property and rest of the browsers */
+	/*
+	transform: rotate(60deg);
+	transform: -ms-rotate(60deg); 
+	transform: -webkit-rotate(60deg); *//* chrome */
+		
+	/* width and height of element, 1 is standard */
+/*	transform: scale(1.0,1.0); */
+	
+	/* Pulling element from X or Y angel
+	   two values measn as X and Y collectively
+	
+	transform: skewY(10deg);
+	transform: skew(10deg,10deg); */	
+}
