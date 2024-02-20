@@ -49,6 +49,7 @@
 }
 
 .left{
+    /* move article to left */
     float: left;
     border: 2px solid black;
     width: 49%;
@@ -57,6 +58,7 @@
 }
 
 .right{
+    /* move article to right */
     float: right;
     border: 2px solid black;
     width: 49%;
