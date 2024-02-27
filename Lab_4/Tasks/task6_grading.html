@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 6 | Grading</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        table{
+            width: 90vw;
+            margin: 10px auto;
+            border-collapse: collapse;
+            border: 2px solid black;
+        }
+        td, th{
+            border: 2px solid black;
+            text-align: center;
+            text-wrap: wrap;
+            padding: 10px 5px;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <script>
+                const inputs = ["Registeration No.", "Name", "Semester", "Web Engineering", "Computer Programming", "Object Oriented Programming", "Data Structures and Algorithms", "Artificial Intelligence", "Obtained Marks", "Percentage", "Final Grade"];
+                inputs.forEach((value) =>{
+                    document.write("<th>" + value + "</th>");
+                });
+            </script>
+        </tr>
+        <tr>
+            <script>
+                function finalGrade(perc){
+                    if(perc <= 100 && perc >= 85)
+                        return "A";
+                    else if(perc >= 75)
+                        return "B";
+                    else if(perc >= 65)
+                        return "C";
+                    else if(perc >= 55)
+                        return "D";
+                    else if(perc >= 45)
+                        return "E";
+                    else
+                        return "F";
+                }
+
+                let values = [];
+                // take inputs from user
+                inputs.forEach((element, index) => {
+                    if(index < 3){
+                        values.push(prompt("Enter " + element));
+                    }
+                    else if(index < 8){
+                        values.push(prompt("Enter " + element + " Marks"));
+                    }
+                    else{
+                    }
+                });
+
+                // Sum the marks
+                let obtainedMarks = 0;
+                for(let i=3; i < 8;  i++){
+                    obtainedMarks += parseInt(values[i]);
+                }
+                console.log(obtainedMarks);
+                
+
+                // Calculate Percentage
+                const percentage = ((obtainedMarks / 500) * 100);
+                
+                values.forEach((value) => {
+                    document.write("<td>" + value + "</td>");
+                });
+                document.write(`<td>${obtainedMarks}</td>`);
+                document.write(`<td>${percentage}</td>`);
+                document.write(`<td>${finalGrade(percentage)}</td>`);
+            </script>
+            
+        </tr>
+    </table>
+</body>
+</html>

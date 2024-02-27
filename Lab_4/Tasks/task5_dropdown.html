@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5 | Dropdown</title>
+    <style>
+        select{
+            width: 10%;
+        }
+    </style>
+</head>
+<body>
+    <h3>Select a City</h3>
+    <select name="city" id="city">
+        <script>
+            const cities = ["Peshawar", "Mardan", "Lahore", "Karachi", "Islamabad"];
+            cities.forEach(city => {
+                document.write("<option value="+ city +">"+ city + "</option>");
+            });
+        </script>
+    </select>
+
+    <!-- alternative way of populating options in dropdown -->
+    <!-- <script>
+        // array of citis
+        const cities = ["Peshawar", "Mardan", "Lahore", "Karachi", "Islamabad"];
+
+        // access the select element using its id
+        let dropdown = document.getElementById('city');
+
+        // map the cities to options
+        const options = cities.map((city) => {
+            return "<option value="+ city +">"+ city + "</option>";
+        })
+
+        dropdown.innerHTML = options;
+    </script> -->
+</body>
+</html>

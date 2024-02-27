@@ -1,0 +1,1 @@
+document.write("I am writing JS script in a separate file of JavaScript linked with HTML.")

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7 | Calculator</title>
+</head>
+
+<body>
+    <script>
+
+        function add(a, b) {
+            return a + b;
+        }
+        function sub(a, b) {
+            return a - b;
+        }
+        function mul(a, b) {
+            return a * b;
+        }
+        function div(a, b) {
+            return a / b;
+        }
+
+        const operand1 = parseInt(prompt("Enter First Operand"));
+        const operator = prompt("Enter any operator (+ - * /)");
+        const operand2 = parseInt(prompt("Enter second Operand"));
+
+        switch (operator) {
+            case "+":
+                alert(`${operand1} ${operator} ${operand2} = ${add(operand1, operand2)}`);
+                break;
+            case "-":
+                alert(`${operand1} ${operator} ${operand2} = ${sub(operand1, operand2)}`);
+                break;
+            case "*":
+                alert(`${operand1} ${operator} ${operand2} = ${mul(operand1, operand2)}`);
+                break;
+            case "/":
+                alert(`${operand1} ${operator} ${operand2} = ${div(operand1, operand2)}`);
+                break;
+            default:
+                alert("Wrong Operator!");
+        }
+    </script>
+</body>
+
+</html>
