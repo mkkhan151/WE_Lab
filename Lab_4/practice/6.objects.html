@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objects in JavaScript</title>
+</head>
+
+<body>
+    <script>
+        // step 1
+        var obj = {
+            firstName: "Kamran",
+            lastName: "Khan",
+            age: 21
+        };
+
+        document.write(`First Name is: ${obj.firstName} <br>`);
+        document.write(`Last Name is: ${obj.lastName} <br>`);
+        document.write(`Age is: ${obj["age"]} <br><br>`);
+
+        // step 2
+        var obj_one = {
+            firstName: "Kamran",
+            lastName: "Khan",
+            age: 21,
+
+            address: ["Mardan", "KPK"]
+        };
+
+        document.write(`First Name is: ${obj_one.firstName} <br>`);
+        document.write(`Last Name is: ${obj_one.lastName} <br>`);
+        document.write(`Age is: ${obj_one["age"]} <br>`);
+        document.write(`Address is: ${obj_one.address} <br>`);
+        document.write(`Address is: ${obj_one.address[1]} <br><br>`);
+
+        // step 3
+        var obj_two = {
+            firstName: "Kamran",
+            lastName: "Khan",
+            age: 21,
+
+            address: ["Mardan", "KPK"],
+            skills: {
+                extraDuty: "CR",
+                designation: "Student",
+                interest: "Cyber Security"
+            }
+        };
+        document.write(`First Name is: ${obj_two.firstName} <br>`);
+        document.write(`Last Name is: ${obj_two.lastName} <br>`);
+        document.write(`Age is: ${obj_two["age"]} <br>`);
+        document.write(`Address is: ${obj_two.address} <br>`);
+        document.write(`Address is: ${obj_two.address[1]} <br>`);
+        document.write(`Extra duty is: ${obj_two.skills.extraDuty} <br>`);
+        document.write(`Designation is: ${obj_two.skills.designation} <br>`);
+        document.write(`Interest is: ${obj_two.skills.interest} <br><br>`);
+
+
+        // step 4
+        var obj_three = {
+            firstName: "Kamran",
+            lastName: "Khan",
+            age: 21
+        };
+
+        for (let data in obj_three){
+            document.write(`${obj_three[data]} <br>`)
+        }
+
+        // step 5
+        var obj_four = {
+            firstName: "Kamran",
+            lastName: "Khan",
+            age: 21,
+            skills: {
+                extraDuty: "CR",
+                designation: "Student",
+                interest: "Cyber Security"
+            }
+        };
+
+        for (let data in obj_four){
+            if(typeof(obj_four[data]) == "object"){
+                for(let nestedData in obj_four[data]){
+                    document.write(`${obj_four[data][nestedData]} <br>`);
+                }
+            }
+            else{
+                document.write(`${obj_four[data]} <br>`);
+            }
+        }
+    </script>
+</body>
+
+</html>
