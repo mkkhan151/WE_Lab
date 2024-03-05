@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard Events</title>
+</head>
+<body>
+    <form action="#">
+        Enter first number <input type="text" id="firstNumber" name="firstNumber"> <br><br>
+        Enter second number <input type="text" id="secondNumber" name="secondNumber"> <br><br>
+        Result <input type="text" id="result" name="result">
+
+        <script>
+            const firstNumber = document.getElementById("firstNumber");
+            const secondNumber = document.getElementById("secondNumber");
+            const result= document.getElementById("result");
+
+            const inputEvent = () => {
+                let sum = parseInt(firstNumber.value) + parseInt(secondNumber.value);
+                result.value = sum.toString();
+            }
+
+            firstNumber.addEventListener("input", inputEvent);
+            secondNumber.addEventListener("input", inputEvent);
+        </script>
+    </form>
+</body>
+</html>

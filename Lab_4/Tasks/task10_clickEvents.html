@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>click Event</title>
+</head>
+<body>
+    <span id="changeMe">
+        <select name="numbers" id="replace">
+            <option value="first">First</option>
+            <option value="second">Second</option>
+        </select>
+    </span>
+    <input type="button" value="New Entry" onclick="replaceDropDown();">
+
+    <script>
+        function replaceDropDown(){
+            const changeMe = document.getElementById("changeMe").innerHTML = "<input type=\"text\">";
+        }
+    </script>
+</body>
+</html>
