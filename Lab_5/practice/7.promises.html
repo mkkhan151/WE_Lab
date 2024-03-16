@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /* Promise is an object that replace the callback functions by using the callback internally
+           but in a more readable format. The result of the async is reflected in the .then() while
+           any error or failure reflects in the .catch(). Promises having three stages such as:
+            1. Pending = intital state, before the promise succeeds or fail
+            2. Resolved = completed/async result
+            3. Rejected = failed/error
+
+            The promise can be as from promise to the resolved (.then()) state or from promise to the rejected (.catch())
+            state and after the resolved or rejected, the promise can visit another promise as well
+        */
+        
+        // the promise should have two args as resolved and rejected. the resolved is for the promise successful
+        // while the rejected is used when the promise is failed. both act as callback function
+        // The following is promise creation
+        const promise_is = new Promise( (resolved,rejected) => {
+            let a = 2, b = 3;
+            let c = a + b;
+            if(c === 6){
+                resolved("Yes promise is successful");
+                console.log("resolved");
+            }else{
+                rejected("No the promise is not resolved");
+                console.log("rejected");
+            }
+        });
+
+        // Upon successful promise creation call the .then() and upon rejection call the .catch
+    promise_is.then( (message) => {     
+        console.log(message)
+    }).catch( (err) => {
+        console.log(err);
+    })
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        /*
+            Async/await
+            async: 
+                 Work with promises in more comfortable way and make promises easier
+                 Makes a function returns a promise as normal function returns string, boolean etc only
+        */
+
+        // Part 1: Async concept which returns the promises
+        // normal function returns string etc.
+        /*
+        function testing(){
+            return "anything";
+        }
+        console.log(testing());
+        // function returns promises internally
+        async function testing_async(){
+            return "Returns the Promise"; // return Promise.resolve("Returns the Promise");
+        }
+        console.log(testing_async());
+        */
+
+        // Part 2: Await concept that halts the next line from executing and makes a function wait for a promise
+        /*
+            async function testing(){
+                statement 1;
+                statement 2;
+                statement 3:
+            }
+            testing();
+            statement 4;
+            statement 5;
+
+            output for the above is statement 1 statement 2 statement 3 statement 4 statement 5
+        */
+        /*
+            Now use the await word as follow
+            async function testing(){
+                statement 1;
+                await statement 2;
+                statement 3:
+            }
+            testing();
+            statement 4;
+            statement 5;
+
+            output for the above is as statement 1 statement 2 statement 4 statement 5 statement 3 
+            In the above code the statement 2 having await halt the statement 3 from executing and hence executed at the end
+
+        */
+        // implementation of the await keyword
+        /*
+        async function testing(){
+            console.log("Statement 1");
+            await console.log("Statement 2");
+            console.log("Statement 3");
+        }
+        testing();
+        console.log("Statement 4");
+        console.log("Statement 5");
+        */
+
+        // Real life example of async/await, which is fetching data from the API
+        /* Working is fetch method is used to gather the data from the API/website here and saved in the data variable
+           Now the collected data should be in the JSON format so call the JSON method with the data variable
+           fetch and json is the await as it can take time to fetch data from somewhere such as API
+        */
+       
+        async function callingAPI(){
+            const data = await fetch("http://jsonplaceholder.typicode.com/posts");
+            const posts = await data.json();
+            return posts;
+        }
+        let apiData  = callingAPI().then(posts => console.log(posts));       // function call
+        console.log(apiData);
+        
+    </script>
+    
+</body>
+</html>

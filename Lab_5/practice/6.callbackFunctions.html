@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Part 1: A function which is passed as an argument in another function is called as callback function
+
+        // Step 2: define the function passed as an argument and working of passed argument
+        function addition(a,b){
+            console.log(a + b);
+        }
+        // Step 3: Define the function that receives another function as parameter
+        function calculator(a,b,callback){
+            console.log("I am calculator function and receiving a callback function");
+            callback(a,b); // here the addition function will be called
+        }
+        // Step 1
+        calculator(2,3,addition);   // calculator is a function having 3 args such as 2,3 and a function addition
+        // or
+        /*
+        calculator(2,3,() => {
+            console.log(2 + 3);
+        });
+        */
+    </script>    
+</body>
+</html>

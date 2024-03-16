@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    
+        // Part 1: What is syncrhonous and asynchronous
+        // The following code is synchronous which means the statements execute step and step and in order the way called
+        let a = 2;
+        console.log(a);
+        let b = 3.3;
+        console.log(b);
+        let c = "synchronous";
+        console.log(c);
+    
+        /* There are times when we need asynchronous code. The former means that sometimes the code takes some time to execute
+         such as fetching data from any website using API etc. The user cannot wait for the data to be fetched but should
+         execute other parts of the page and once the fetching data completed should display the data then asynchrounously
+        */
+    
+        // In the following code all the console code executes and after 4 seconds the function returns the output
+        let d = 3, e = 4, f = 5;
+        console.log(d);
+        console.log(e);
+        // arrow function to be passed to the setTimeOut
+        let testing = () => {
+            console.log("testing asynchronous");
+        }
+        setTimeout(testing,4000);   // 4000 milliseconds means if any task taking 4 seconds, till then execute the rest
+        console.log(f);
+        console.log(10);
+        // setTimeout having internal whole arrow function definition
+        setTimeout( () => {
+            console.log("Testing asynchronous");
+        },4000);
+    
+       </script>
+    
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Arrow function
+        // Why we need part?
+        // normal function
+        function testing(){
+            console.log("normal function");
+        }
+        testing();
+        // function assign to the variable
+        let test = function(){
+            console.log("Function assign to the variable ");
+        }
+        test();
+
+        // The above is converted to the arrow function
+        let arrowFunction = () => {
+            return "Arrow Function";
+        }
+        console.log(arrowFunction());
+
+        // when the function has one statement
+        let arrowFunctionTwo = () => "one statement function";
+        console.log(arrowFunctionTwo());
+
+        // when there is parameters
+        let arrowFunctionParam = (a,b) => {
+            return a * b;
+        }
+        console.log(arrowFunctionParam(5,10));
+   </script>
+</body>
+</html>

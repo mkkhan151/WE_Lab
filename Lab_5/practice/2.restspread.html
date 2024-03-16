@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <script>
+        // Rest parameters used in the function while the spread is used in the array
+        // Part 1: Why need rest parameters
+        // The problem with the following function is if I want another variable then manually to add the
+        // variable in the calling and called function
+        function without_rest_parameters(a,b,c){
+            console.log(a,b,c);
+        }
+        without_rest_parameters(2,3,4);
+
+        // use ... for rest parameters and it won't need any manual inclusion of the parameters in the callig function
+        // output will be in the array form
+        function with_rest_parameters(...a){
+            console.log(a)
+        }
+
+        with_rest_parameters(2,3,4,5);
+
+        // Part 2: to concatenate two arrays into one, use spread concept which is again the ... syntax
+        let array_one = [1,2,3];
+        let array_two = [4,5,6,...array_one];       // arary_two + array_one
+        console.log(array_two);
+
+        let array_three = [...array_one,...array_two];
+        console.log(array_three);
+
+
+    </script>
+    
+</body>
+</html>
