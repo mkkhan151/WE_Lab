@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 5 | Call Back Function</title>
+</head>
+<body>
+    <script>
+        function display(msg, callBack){
+            console.log(`Message is: ${msg}`);
+            callBack("You will know the word 'weird' here.");
+        }
+
+        display("Welcome to JavaScript", (callBackMsg) => {
+            console.log(`Callback Message is: ${callBackMsg}`);
+        });
+    </script>
+</body>
+</html>

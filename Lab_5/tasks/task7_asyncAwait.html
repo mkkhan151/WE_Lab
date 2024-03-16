@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 7 | Async Await</title>
+</head>
+<body>
+    <script>
+        async function callAPI(){
+            const response = await fetch("http://jsonplaceholder.typicode.com/posts");
+            const data = response.json();
+            return data;
+        }
+
+        callAPI().then((data) => {
+            console.log(data);
+        }).catch((err) => {
+            console.log("Error occured");
+        });
+    </script>
+</body>
+</html>
